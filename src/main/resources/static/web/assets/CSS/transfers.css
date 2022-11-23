@@ -1,0 +1,352 @@
+@import url(./variables.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    font-family: 'Space Mono', monospace;
+}
+
+.title {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem !important;
+}
+
+.anchor-volver {
+    text-decoration: none !important;
+    background-color: grey !important;
+    transition: 1s !important;
+    font-weight: 700 !important;
+}
+
+.anchor-volver:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+.main-transfers {
+    min-height: 110vh;
+    width: 100%;
+    background-color: var(--3-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 7rem 2rem 2rem 2rem;
+    color: var(--white);
+    font-size: 1.15rem;
+}
+
+.form {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--1-color);
+    padding: 1rem;
+    border-radius: .5rem;
+    gap: 2rem;
+}
+
+.paso {
+    height: 9rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor-radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* ---------------------------------------------------------------- */
+.cont {
+    display: flex;
+    align-items: center;
+    transform: scale(1);
+}
+
+label,
+b {
+    color: var(--bg-color);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.input[type="radio"] {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin: 5px;
+    display: inline-block;
+    appearance: none;
+    position: relative;
+    background-color: #F2ECFF;
+    border-radius: .3rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.input[type="radio"]::after {
+    content: '';
+    display: block;
+    height: 0.9rem;
+    width: .4rem;
+    border-bottom: .31rem solid #a0ffe7;
+    border-right: .31rem solid #a0ffe7;
+    opacity: 0;
+    transform: rotate(45deg) translate(-50%, -50%);
+    position: absolute;
+    top: 45%;
+    left: 21%;
+    transition: .25s ease;
+}
+
+.input[type="radio"]::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    background-color: var(--2-color);
+    border-radius: 50%;
+    opacity: .5;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: .3s ease;
+}
+
+.input[type="radio"]:checked::before {
+    height: 130%;
+    width: 130%;
+    opacity: 100%;
+}
+
+.input[type="radio"]:checked::after {
+    opacity: 100%;
+}
+
+.span {
+    font-size: 2rem;
+}
+
+/* ---------------------------------------------------------------- */
+
+.input_text {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+}
+
+.input_text input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px var(--bg-color) solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.input_text input:focus,
+.input_text input:valid {
+    outline: 0;
+    border-bottom-color: var(--bg-color);
+}
+
+.input_text label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.input_text label span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    min-width: 5px;
+    color: var(--bg-color);
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.input_text input:focus+label span,
+.input_text input:valid+label span {
+    color: var(--bg-color);
+    transform: translateY(-30px);
+}
+
+/* ---------------------------------------------------------------- */
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    position: relative;
+    padding: 0 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 0;
+    box-shadow: var(--3-color) 0px 7px 0px 0px;
+    background-color: var(--2-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 31ms cubic-bezier(.5, .7, .4, 1);
+}
+
+.submit:before {
+    content: attr(alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 4px;
+    opacity: 1;
+    transition: 1s;
+}
+
+.submit:active {
+    box-shadow: none;
+    transform: translateY(7px);
+    transition: 35ms cubic-bezier(.5, .7, .4, 1);
+}
+
+.submit:hover:before {
+    transition: all .0s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+
+.submit i {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-style: normal;
+    transition: all 2s ease;
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.submit:hover i {
+    transition: all .2s ease;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.submit:hover i:nth-child(1) {
+    transition-delay: 0.035s;
+}
+
+.submit:hover i:nth-child(2) {
+    transition-delay: 50ms;
+}
+
+.submit:hover i:nth-child(3) {
+    transition-delay: 100ms;
+}
+
+.submit:hover i:nth-child(4) {
+    transition-delay: 150ms;
+}
+
+.submit:hover i:nth-child(5) {
+    transition-delay: 200ms;
+}
+
+.submit:hover i:nth-child(6) {
+    transition-delay: 250ms;
+}
+
+/* ---------------------------------------------------------------- */
+
+select {
+    /* appearance: none; */
+    border: 0;
+    outline: 0;
+    font: inherit;
+    width: 15rem;
+    height: 2.5rem;
+    padding: 0 4em 0 1em;
+    background-color: var(--2-color);
+    color: var(--bg-color);
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+select option {
+    color: inherit;
+    background-color: var(--primary-color);
+}
+
+select:focus {
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+
+/* ---------------------------------------------------------------- */
+
+.svg-footer {
+    background-color: var(--3-color);
+}
+
+@media screen and (max-width:600px) {
+    .main-transfers {
+        height: 300vh;
+    }
+
+    .form {
+        gap: 5rem;
+    }
+
+    .contenedor-radio {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width:481px) {
+    .form {
+        gap: 7rem;
+    }
+}
+
+@media screen and (max-width:466px) {
+    .main-transfers {
+        height: 320vh;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .form {
+        width: 100%;
+        padding-top: 3rem;
+    }
+}

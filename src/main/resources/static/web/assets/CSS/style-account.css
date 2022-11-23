@@ -1,0 +1,174 @@
+@import url(./variables.css);
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    font-family: 'Space Mono', monospace;
+}
+
+.h3 {
+    background-color: var(--3-color);
+    padding: .5rem;
+    border-radius: .3rem;
+}
+
+.title {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem !important;
+}
+
+.anchor-volver {
+    text-decoration: none !important;
+    background-color: grey !important;
+    transition: 1s !important;
+    font-weight: 700 !important;
+}
+
+.anchor-volver:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+.main-account {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--2-color);
+    gap: 2rem;
+}
+
+.svg-account {
+    position: absolute;
+}
+
+.sinTransacciones {
+    z-index: 99;
+    background-color: var(3);
+    border-radius: .5rem;
+    padding: .5rem;
+    color: white;
+}
+
+.tabla-transacciones {
+    width: 50%;
+    padding: .3rem;
+    z-index: 1;
+    font-weight: 600;
+    border: 0;
+    border-radius: .3rem !important;
+}
+
+.tabla-transacciones caption {
+    text-align: center;
+
+    font-weight: 600;
+}
+
+.tabla-transacciones caption span {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.tabla-transacciones tbody tr:hover {
+    transition: .1s;
+    background-color: rgba(102, 102, 102, 0.792);
+    transform: scale(1.01);
+}
+
+
+.tabla-transacciones th,
+.tabla-transacciones td {
+
+    text-align: center;
+    padding: .5rem;
+
+}
+
+.tabla-transacciones tr {
+    border-bottom: 1px black solid;
+}
+
+.tabla-transacciones tr:last-child {
+    border-bottom: none;
+}
+
+.svgede-account {
+    background-color: var(--2-color);
+}
+
+thead {
+    font-weight: 900;
+    background-color: rgba(226, 226, 226, 0.9);
+    border-radius: .3rem;
+    overflow: hidden;
+}
+
+td {
+    font-weight: 700;
+    background-color: rgba(158, 158, 158, 0.9);
+}
+
+.debito {
+    color: rgb(202, 14, 14);
+}
+
+.credito {
+    color: rgb(57, 206, 57);
+}
+
+.credito,
+.debito {
+    font-weight: 700;
+    text-shadow: 2px 2px 1px black;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .tabla-transacciones {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .svg-account {
+        position: absolute;
+        width: 80%;
+        height: 80%;
+    }
+
+    .tabla-transacciones thead {
+        display: none;
+    }
+
+    .tabla-transacciones tr {
+        display: block;
+        margin-bottom: 9px;
+    }
+
+    .tabla-transacciones td {
+        display: block;
+        border-bottom: .1rem solid rgb(53, 52, 52);
+
+    }
+
+    .tabla-transacciones td::before {
+        content: attr(data-label);
+        font-weight: bolder;
+
+    }
+}
+
+@media screen and (max-width: 411px) {
+    .main-account {
+        padding-top: 7rem;
+    }
+}

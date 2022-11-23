@@ -1,0 +1,339 @@
+@import url(./variables.css);
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    font-family: 'Space Mono', monospace;
+}
+
+.main-create-cards {
+    width: 100%;
+    min-height: 135vh;
+    padding-top: 9rem;
+    padding-bottom: 6rem;
+    background-color: var(--2-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    color: white;
+}
+
+.title {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem !important;
+}
+
+.anchor-volver {
+    text-decoration: none !important;
+    background-color: grey !important;
+    transition: 1s !important;
+    font-weight: 700 !important;
+}
+
+.anchor-volver:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+
+.titulo {
+    width: 70%;
+    z-index: 99;
+}
+
+.titulo h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.titulo p {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 650;
+}
+
+
+
+.form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 99;
+
+}
+
+.conteinerPasos {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: var(--1-color);
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+.paso {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.paso p {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.paso label {
+    margin-bottom: .5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    width: 7rem;
+}
+
+.ultimoPaso {
+    background-color: var(--1-color);
+    border-radius: .5rem;
+    padding: .5rem;
+
+}
+
+/* -------------------------------------------------------------------------- */
+/* From uiverse.io by @barisdogansutcu */
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    position: relative;
+    padding: 0 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 0;
+    box-shadow: var(--3-color) 0px 7px 0px 0px;
+    background-color: var(--1-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 31ms cubic-bezier(.5, .7, .4, 1);
+}
+
+.submit:before {
+    content: attr(alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 4px;
+    opacity: 1;
+    transition: 1s;
+}
+
+.submit:active {
+    box-shadow: none;
+    transform: translateY(7px);
+    transition: 35ms cubic-bezier(.5, .7, .4, 1);
+}
+
+.submit:hover:before {
+    transition: all .0s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.submit i {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-style: normal;
+    transition: all 2s ease;
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.submit:hover i {
+    transition: all .2s ease;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.submit:hover i:nth-child(1) {
+    transition-delay: 0.035s;
+}
+
+.submit:hover i:nth-child(2) {
+    transition-delay: calc(0.035s * 3);
+}
+
+.submit:hover i:nth-child(3) {
+    transition-delay: calc(0.035s * 4);
+}
+
+.submit:hover i:nth-child(4) {
+    transition-delay: calc(0.040s * 5);
+}
+
+.submit:hover i:nth-child(5) {
+    transition-delay: calc(0.035s * 6);
+}
+
+.submit:hover i:nth-child(7) {
+    transition-delay: calc(0.035s * 8);
+}
+
+.submit:hover i:nth-child(8) {
+    transition-delay: calc(0.035s * 9);
+}
+
+.submit:hover i:nth-child(9) {
+    transition-delay: calc(0.035s * 10);
+}
+
+.submit:hover i:nth-child(10) {
+    transition-delay: calc(0.035s * 11);
+}
+
+.submit:hover i:nth-child(11) {
+    transition-delay: calc(0.035s * 12);
+}
+
+.submit:hover i:nth-child(12) {
+    transition-delay: calc(0.035s * 13);
+}
+
+.submit:hover i:nth-child(13) {
+    transition-delay: calc(0.035s * 14);
+}
+
+.submit:hover i:nth-child(14) {
+    transition-delay: calc(0.035s * 15);
+}
+
+/* -------------------------------------------- */
+
+
+
+.svg-create-cards1 {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    opacity: .80;
+}
+
+.svg-create-cards2 {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    opacity: .80;
+
+    width: 30rem;
+    height: 30rem;
+}
+
+.svg-footer {
+    background-color: var(--2-color);
+
+}
+
+@media screen and (max-width: 943px) {
+    .svg-create-cards2 {
+        top: 70%;
+    }
+}
+
+@media screen and (max-width: 884px) {
+    .titulo {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 703px) {
+    .main-create-cards {
+        height: 170vh;
+    }
+
+    .conteinerPasos {
+        width: 70%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    .paso {
+        width: 90%;
+        height: 30%;
+    }
+}
+
+@media screen and (max-width: 687px) {
+    .main-create-cards {
+        padding-top: 9rem;
+        height: 180vh;
+    }
+
+    .svg-create-cards2 {
+        top: 95%;
+    }
+}
+
+@media screen and (max-width: 622px) {
+    .conteinerPasos {
+        width: 85%;
+    }
+
+    .paso {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .main-create-cards {
+        height: 200vh;
+    }
+}
+
+@media screen and (max-width:481px) {
+    .main-create-cards {
+        padding-top: 10rem;
+        height: 220vh;
+    }
+
+    .svg-create-cards2 {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .svg-create-cards1 {
+        width: 28rem;
+        height: 28rem;
+    }
+
+    .form {
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    .svg-create-cards2 {
+        width: 20rem;
+        height: 20rem;
+    }
+}

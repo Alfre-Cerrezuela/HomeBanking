@@ -1,0 +1,89 @@
+@import url(../../../web/assets/CSS/variables.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    /* border: 1px solid black; */
+}
+
+main {
+    padding-top: 5rem;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--2-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: var(--bg-color);
+    text-shadow: 1px 1px 2px solid white;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--1-color);
+    width: 90%;
+    height: 85%;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+select {
+    /* appearance: none; */
+    border: 0;
+    outline: 0;
+    width: 12rem;
+    height: 2rem;
+    background-color: var(--bg-color);
+    color: var(--3-color);
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 1rem !important;
+}
+
+select option {
+    color: inherit;
+    background-color: var(--primary-color);
+    font-size: 1rem;
+}
+
+select:focus {
+    outline: none;
+    font-size: 1rem;
+}
+
+select::-ms-expand {
+    display: none;
+    font-size: 1rem;
+}
+
+.crearPrestamo {
+    width: 70%;
+    height: auto;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: .3rem;
+}
+
+.crearPrestamo section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

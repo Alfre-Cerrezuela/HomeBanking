@@ -1,0 +1,21 @@
+.footer {
+    background-color: rgb(47, 46, 65);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+}
+
+footer div ul li a {
+    font-weight: 500;
+    color: white;
+    text-decoration: underline 2.5px rgb(255, 202, 138);
+    transition: .3s;
+}
+
+footer div ul li a:hover {
+    color: rgb(255, 202, 138);
+    transition: .3s;
+    transform: scale(1.5);
+}

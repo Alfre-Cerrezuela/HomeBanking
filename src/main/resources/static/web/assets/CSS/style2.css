@@ -1,0 +1,493 @@
+@import url(./variables.css);
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: content-box;
+    /* border: 1px solid black; */
+    font-family: 'Space Mono', monospace;
+}
+
+.sesion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-backdrop {
+    height: 0 !important;
+}
+
+.sesion a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cerrarSesion:hover {
+    cursor: pointer;
+}
+
+.p {
+    font-weight: 500;
+}
+
+.b {
+    color: black;
+}
+
+.boton-estado {
+    background-color: grey !important;
+    transition: 1s !important;
+}
+
+.boton-estado:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+
+.header-accounts {
+    height: 10vh;
+}
+
+.sesion-cliente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sesion-cliente-p1 {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-accounts {
+    background-color: var(--1-color);
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+h1 {
+    z-index: 99;
+    color: white;
+}
+
+/* ------------------------------------------------------------ */
+/* From uiverse.io by @adamgiebl */
+.boton {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--2-color);
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid var(--2-color);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #278396;
+}
+
+.boton:hover {
+    color: var(--bg-color);
+    box-shadow: inset 0 -100px 0 0 var(--2-color);
+}
+
+.boton:active {
+    transform: scale(0.9);
+}
+
+/* ------------------------------------------------------------ */
+
+
+.cuentas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 90%;
+    min-height: 1rem;
+    margin: 3.5rem 0;
+}
+
+.tarjeta {
+    width: 25%;
+    border-radius: 20px;
+    background: var(--3-color);
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid var(--2-color);
+    transition: 0.5s ease-out;
+    overflow: visible;
+    opacity: .95;
+
+}
+
+.card-details {
+    color: var(--white);
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+}
+
+.card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--2-color);
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.text_body {
+    color: var(--white);
+    font-weight: 500;
+}
+
+b {
+    color: var(--bg-color);
+}
+
+/*Text*/
+.text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*Hover*/
+.tarjeta:hover {
+    border-color: var(--bg-color);
+    box-shadow: 0 1px 18px 0 var(--bg-color);
+    opacity: 1;
+}
+
+.tarjeta:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+}
+
+.card-button a {
+    color: var(--2-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.card-button a:hover {
+    color: var(--2-color);
+    text-decoration: underline var(--3-color) 2px;
+    font-size: 1.2rem;
+}
+
+.titulo-prestamos {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.contenedor-prestamos {
+    z-index: 1;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenido-prestamos {
+    background-color: var(--2-color);
+    border-radius: 1rem;
+    margin: 1rem 0;
+    box-shadow: 2px 2px 3px var(--bg-color);
+    width: 100%;
+    height: 4rem;
+}
+
+.contenido-prestamos p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+}
+
+/* ---------------------------------------------------------------------- */
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    background: var(--2-color);
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+.add-btn:hover {
+    width: 120px;
+}
+
+.add-btn::before,
+.add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: var(--bg-color);
+}
+
+.add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+    outline: none;
+}
+
+.btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+    font-size: .9rem;
+    color: var(--bg-color);
+    font-weight: 600;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+}
+
+.add-btn:hover .btn-txt {
+    opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: var(--bg-color);
+    overflow: hidden;
+}
+
+.add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+
+/* ---------------------------------------------------------------------- */
+
+.svg-accounts {
+    position: absolute;
+}
+
+.svgede {
+    background-color: var(--1-color);
+}
+
+
+@media screen and (max-width: 1105px) {
+    .cartaP1 {
+        height: 12rem;
+    }
+}
+
+@media screen and (max-width: 974px) {
+    .cuentas {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        width: 80%;
+        height: 5rem;
+    }
+
+    .card-details {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .card-details p {
+        margin: 0%;
+    }
+
+    .contenedor-prestamos {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 826px) {
+    .cuenta {
+        width: 40%;
+    }
+
+    .parte2 {
+        min-height: 200vh;
+    }
+
+    .parte2-1 {
+        width: 80%;
+    }
+
+    .parte2-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .parte2-2-mid {
+        height: 30%;
+    }
+
+    .parte2-2-left,
+    .parte2-2-right {
+        width: 80%;
+
+    }
+
+    .svg-accounts {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media screen and (max-width: 684px) {
+
+    .contenido-prestamos {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 8rem;
+    }
+
+    .tarjeta {
+        height: 7rem;
+    }
+
+    .card-details {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .top {
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .top svg {
+        border-radius: 0.4rem;
+        width: 40% !important;
+        height: 40% !important;
+    }
+
+    .parte1 {
+        padding: 2rem 0%;
+        gap: 1rem;
+    }
+
+    .parte1-contenedor-cartas {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cartaP1 {
+        width: 70%;
+        height: 7rem;
+    }
+}
+
+
+@media screen and (max-width: 567px) {
+    .parte2-2-mid svg {
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .parte2 {
+        height: 140vh !important;
+        padding-bottom: 10rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cuenta {
+        width: 70%;
+    }
+
+    .cartaP1 {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 383px) {
+    .main-accounts {
+        padding-top: 10rem;
+    }
+
+    .tarjeta {
+        padding: .4rem;
+    }
+}

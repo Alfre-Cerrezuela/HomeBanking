@@ -1,0 +1,119 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    /*  border: 1px black solid; */
+}
+
+:root {
+    color: #353284;
+    color: #dfe1df;
+    color: #9d5340;
+}
+
+#app {
+    display: flex;
+    background-color: #dfe1df;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.clientManager {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.clientManager h1 {
+    text-align: center;
+    color: #353284;
+}
+
+.clientManager form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.clientManager form label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 1.3rem;
+    color: #353284;
+    font-weight: bolder;
+}
+
+.clientManager form label input {
+    text-align: center;
+    width: 55%;
+    height: 1.7rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    box-shadow: 2px 2px 2px gray;
+}
+
+.botones {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.submit {
+    width: 5rem;
+    height: 1.9rem;
+    background-color: #9d5340;
+    color: #353284;
+    font-weight: 700;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    box-shadow: 2px 2px 2px gray;
+}
+
+.divTabla {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.divTabla h2 {
+    text-align: center;
+    color: #353284;
+}
+
+.divTabla table {
+    border-collapse: collapse;
+    margin: 0.3rem;
+    border: 1px solid black;
+
+}
+
+.divTabla th {
+    font-size: 1.1rem;
+    border: 1px solid black;
+}
+
+.divTabla td {
+    border: 1px solid black;
+}
+
+
+.clientRest {
+    width: 50%;
+    border-left: 1px solid #353284;
+}
+
+.clientRest h2 {
+    color: #353284;
+    text-align: center;
+}
