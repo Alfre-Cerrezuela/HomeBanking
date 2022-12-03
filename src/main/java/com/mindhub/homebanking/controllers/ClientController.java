@@ -7,6 +7,7 @@ import com.mindhub.homebanking.models.AccountType;
 import com.mindhub.homebanking.models.Client;
 import com.mindhub.homebanking.service.AccountService;
 import com.mindhub.homebanking.service.ClientService;
+import com.mindhub.homebanking.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,6 +31,9 @@ public class ClientController {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+    EmailService emailService;
+
 
     @GetMapping("/api/clients")
     public List<ClienDTO> getClients() {
@@ -94,6 +98,28 @@ public class ClientController {
         Client clientCurrent = clientService.clientFindByEmail(authentication.getName());
 //        Object cosas= authentication.getCredentials();
         return new ClienDTO(clientCurrent);
+    }
+    @PostMapping("/api/client/mail")
+    public ResponseEntity<?> sendEmailTool(
+            @RequestParam String to,
+            @RequestParam int code
+    ){
+        String textMenssage = "El codigo de validacion es: " + code;
+        String subject = "Validación del Email: " +to+". Para registrarse en UnityBank";
+        emailService.sendEmailTool(textMenssage,to,subject);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+    @PatchMapping("/api/client/validation")
+    public ResponseEntity<?> validationOfEmail(
+            @RequestParam String email,
+            @RequestParam int code
+    ){
+        Client clientCurrent = clientService.clientFindByEmail(email);
+        if (code == clientCurrent.getCodeOfValidation()){
+            clientCurrent.setValidated(true);
+            clientService.saveClient(clientCurrent);
+        }
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 

@@ -18,6 +18,8 @@ public class Client {
     private String lastName;
     private String email;
     private String password;
+    private boolean validated = false;
+    private  int codeOfValidation;
 
     @OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
     private Set<Account> accounts = new HashSet<>();
@@ -114,6 +116,26 @@ public class Client {
 
     public static long getNumberOfClients() {
         return numberOfClients;
+    }
+
+    public boolean isValidated() {
+        return validated;
+    }
+
+    public int getCodeOfValidation() {
+        return codeOfValidation;
+    }
+
+    public void setCodeOfValidation(int codeOfValidation) {
+        this.codeOfValidation = codeOfValidation;
+    }
+
+    public void setValidated(boolean validated) {
+        this.validated = validated;
+    }
+
+    public static void setNumberOfClients(long numberOfClients) {
+        Client.numberOfClients = numberOfClients;
     }
 
     @Override
